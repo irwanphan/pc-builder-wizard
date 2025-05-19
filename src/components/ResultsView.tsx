@@ -4,6 +4,7 @@ import { ComponentType, Component, UsageType } from '../types';
 import { components } from '../data/components';
 import ComponentCard from './ComponentCard';
 import PerformanceChart from './PerformanceChart';
+import { formatCurrency } from '../lib/formatCurrency';
 
 const ResultsView: React.FC = () => {
   const { state, swapBuildComponent, resetWizard } = useWizard();
@@ -62,10 +63,10 @@ const ResultsView: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
             <div>
               <h3 className="text-2xl font-semibold mb-1">Total Build Price: 
-                <span className="text-blue-600 ml-2">${customizedBuild.totalPrice.toLocaleString()}</span>
+                <span className="text-blue-600 ml-2">{formatCurrency(customizedBuild.totalPrice, 'IDR')}</span>
               </h3>
               <p className={`${budgetStatus.color} font-medium`}>
-                {budgetStatus.message} (Budget: ${budget.toLocaleString()})
+                {budgetStatus.message} (Budget: {formatCurrency(budget, 'IDR')})
               </p>
             </div>
             

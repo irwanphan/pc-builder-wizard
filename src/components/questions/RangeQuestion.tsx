@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Question } from '../../types';
+import { formatCurrency } from '../../lib/formatCurrency';
 
 interface RangeQuestionProps {
   question: Question;
@@ -36,9 +37,9 @@ const RangeQuestion: React.FC<RangeQuestionProps> = ({
   return (
     <div className="py-4">
       <div className="flex justify-between items-center mb-2">
-        <span className="text-gray-700">{min.toLocaleString()}{unit}</span>
-        <span className="text-xl font-bold text-blue-600">{localValue.toLocaleString()}{unit}</span>
-        <span className="text-gray-700">{max.toLocaleString()}{unit}</span>
+        <span className="text-gray-700">{formatCurrency(min, 'IDR')}</span>
+        <span className="text-xl font-bold text-blue-600">{formatCurrency(localValue, 'IDR')}</span>
+        <span className="text-gray-700">{formatCurrency(max, 'IDR')}</span>
       </div>
       
       <div className="relative">
@@ -62,15 +63,15 @@ const RangeQuestion: React.FC<RangeQuestionProps> = ({
         <div className="grid grid-cols-3 gap-2 text-sm">
           <div className="bg-gray-100 p-3 rounded-lg">
             <div className="font-semibold mb-1">Entry level</div>
-            <div className="text-gray-600">$500 - $1000</div>
+            <div className="text-gray-600">{formatCurrency(8250000, 'IDR')} - {formatCurrency(16500000, 'IDR')}</div>
           </div>
           <div className="bg-gray-100 p-3 rounded-lg">
             <div className="font-semibold mb-1">Mid-range</div>
-            <div className="text-gray-600">$1000 - $2000</div>
+            <div className="text-gray-600">{formatCurrency(16500000, 'IDR')} - {formatCurrency(33000000, 'IDR')}</div>
           </div>
           <div className="bg-gray-100 p-3 rounded-lg">
             <div className="font-semibold mb-1">High-end</div>
-            <div className="text-gray-600">$2000+</div>
+            <div className="text-gray-600">{formatCurrency(33000000, 'IDR')}+</div>
           </div>
         </div>
       </div>

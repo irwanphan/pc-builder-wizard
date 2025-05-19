@@ -7,7 +7,7 @@ export const components: Component[] = [
     type: 'cpu',
     name: 'Core i5-14600K',
     brand: 'Intel',
-    price: 319,
+    price: 5263500, // 319 USD
     performance: {
       gaming: 85,
       office: 90,
@@ -31,7 +31,7 @@ export const components: Component[] = [
     type: 'cpu',
     name: 'Ryzen 7 7800X3D',
     brand: 'AMD',
-    price: 449,
+    price: 7408500, // 449 USD
     performance: {
       gaming: 95,
       office: 85,
@@ -55,7 +55,7 @@ export const components: Component[] = [
     type: 'cpu',
     name: 'Ryzen 9 7950X',
     brand: 'AMD',
-    price: 699,
+    price: 11533500, // 699 USD
     performance: {
       gaming: 90,
       office: 95,
@@ -81,7 +81,7 @@ export const components: Component[] = [
     type: 'gpu',
     name: 'GeForce RTX 4060 Ti',
     brand: 'NVIDIA',
-    price: 399,
+    price: 6583500, // 399 USD
     performance: {
       gaming: 80,
       office: 70,
@@ -102,7 +102,7 @@ export const components: Component[] = [
     type: 'gpu',
     name: 'Radeon RX 7800 XT',
     brand: 'AMD',
-    price: 499,
+    price: 8233500, // 499 USD
     performance: {
       gaming: 85,
       office: 75,
@@ -123,7 +123,7 @@ export const components: Component[] = [
     type: 'gpu',
     name: 'GeForce RTX 4080 Super',
     brand: 'NVIDIA',
-    price: 999,
+    price: 16483500, // 999 USD
     performance: {
       gaming: 95,
       office: 85,
@@ -146,7 +146,7 @@ export const components: Component[] = [
     type: 'ram',
     name: 'Vengeance LPX 16GB',
     brand: 'Corsair',
-    price: 69,
+    price: 1138500, // 69 USD
     performance: {
       gaming: 75,
       office: 80,
@@ -168,7 +168,7 @@ export const components: Component[] = [
     type: 'ram',
     name: 'Trident Z5 RGB 32GB',
     brand: 'G.Skill',
-    price: 159,
+    price: 2623500, // 159 USD
     performance: {
       gaming: 90,
       office: 90,
@@ -192,7 +192,7 @@ export const components: Component[] = [
     type: 'storage',
     name: '970 EVO Plus 1TB',
     brand: 'Samsung',
-    price: 119,
+    price: 1963500, // 119 USD
     performance: {
       gaming: 85,
       office: 85,
@@ -214,7 +214,7 @@ export const components: Component[] = [
     type: 'storage',
     name: '980 PRO 2TB',
     brand: 'Samsung',
-    price: 219,
+    price: 3613500, // 219 USD
     performance: {
       gaming: 90,
       office: 90,
@@ -231,7 +231,4 @@ export const components: Component[] = [
       writeSpeed: 5100,
     }
   },
-  
-  // Other components would follow similar patterns
-  // Motherboards, PSUs, Cases, Cooling
 ];

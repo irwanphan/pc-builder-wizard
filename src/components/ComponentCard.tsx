@@ -1,5 +1,6 @@
 import React from 'react';
 import { Component } from '../types';
+import { formatCurrency } from '../lib/formatCurrency';
 
 interface ComponentCardProps {
   component: Component;
@@ -17,7 +18,7 @@ const ComponentCard: React.FC<ComponentCardProps> = ({
   onSwapClick
 }) => {
   // Helper to format specs for display
-  const formatSpec = (key: string, value: string | number): string => {
+  const formatSpec = (key: string, value: number): string => {
     switch (key) {
       case 'cores':
         return `${value} cores`;
@@ -61,7 +62,7 @@ const ComponentCard: React.FC<ComponentCardProps> = ({
             <h3 className="font-semibold text-lg">{component.name}</h3>
             <p className="text-gray-500 text-sm">{component.brand}</p>
           </div>
-          <div className="text-lg font-medium text-blue-600">${component.price}</div>
+          <div className="text-lg font-medium text-blue-600">{formatCurrency(component.price, 'IDR')}</div>
         </div>
         
         <div className="mt-3">

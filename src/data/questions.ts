@@ -18,9 +18,9 @@ export const questions: Question[] = [
     id: 'budget',
     text: 'What is your budget for this PC build?',
     type: 'range',
-    min: 500,
-    max: 5000,
-    unit: '$'
+    min: 8250000,  // 500 USD
+    max: 82500000, // 5000 USD
+    unit: 'Rp'
   },
   {
     id: 'applications',
