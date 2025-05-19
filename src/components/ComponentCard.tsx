@@ -18,7 +18,7 @@ const ComponentCard: React.FC<ComponentCardProps> = ({
   onSwapClick
 }) => {
   // Helper to format specs for display
-  const formatSpec = (key: string, value: number): string => {
+  const formatSpec = (key: string, value: string | number): string => {
     switch (key) {
       case 'cores':
         return `${value} cores`;
@@ -32,8 +32,10 @@ const ComponentCard: React.FC<ComponentCardProps> = ({
         return `${value}W TDP`;
       case 'vram':
         return `${value}GB VRAM`;
-      case 'capacity':
-        return value >= 1000 ? `${value / 1000}TB` : `${value}GB`;
+      case 'capacity': {
+        const numValue = Number(value);
+        return numValue >= 1000 ? `${numValue / 1000}TB` : `${numValue}GB`;
+      }
       case 'readSpeed':
         return `${value} MB/s read`;
       case 'writeSpeed':
